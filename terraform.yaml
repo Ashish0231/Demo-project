@@ -14,5 +14,5 @@
       yum:
         name: terraform
         state: present
-
-...
+ 
+ ...
