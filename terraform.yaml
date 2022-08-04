@@ -1,6 +1,6 @@
 ---
 - name: terraform install on redhat
-  hosts: myserver[1]
+  hosts: web
   tasks:
     - name: installing package
       yum:
