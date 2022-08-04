@@ -1,0 +1,18 @@
+---
+- name: terraform install on redhat
+  hosts: myserver[1]
+  tasks:
+    - name: installing package
+      yum:
+        name: yum-utils
+        state: present
+
+    - name: installing and configuring repo
+      action: yum_repository name=hashicorp description=HashicorpRepo baseurl=https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo enabled=yes gpgcheck=0
+
+    - name: installing terraform 
+      yum:
+        name: terraform
+        state: present
+
+...
